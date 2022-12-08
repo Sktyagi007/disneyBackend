@@ -1,5 +1,6 @@
 
 const  express = require("express")
+const cors = require("cors");
 //npm i cookie-parser
 const cookieParser = require("cookie-parser");
 
@@ -11,6 +12,7 @@ const app = express();
 const authRouter = require("./src/routes/authRoutes");
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 //signup input:
 //name,
@@ -22,6 +24,6 @@ app.use(cookieParser());
 
 app.use("/api/v1/auth",authRouter);
 
-app.listen(3000,function(){
-    console.log("server started at 3000");
+app.listen(3001,function(){
+    console.log("server started at 3001");
 })

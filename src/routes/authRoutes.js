@@ -6,8 +6,10 @@ const { signupController,loginController, forgetPasswordController, resetPasswor
 authRouter.post("/signup", signupController)
 
 authRouter.post("/login", loginController)
+
 authRouter.patch("/forgetPassword", forgetPasswordController)
 
 authRouter.patch("/resetPassword", resetPasswordController)
+
 
 module.exports = authRouter;
